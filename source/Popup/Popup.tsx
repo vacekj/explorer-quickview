@@ -10,6 +10,14 @@ function openWebPage(url: string): Promise<Tabs.Tab> {
 const Popup: React.FC = () => {
   return (
     <VStack m={5} id="popup" minW={16}>
+      <Button
+        variant={"link"}
+        onClick={() => {
+          openWebPage("options.html");
+        }}
+      >
+        History
+      </Button>
       <FormControl>
         <FormLabel>Chain</FormLabel>
         <Select w={"300px"}>

@@ -9,6 +9,7 @@
       "esnext"
     ],
     "declaration": false,
+    "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
     /* Additional Checks */
     "useDefineForClassFields": true,

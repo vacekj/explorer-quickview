@@ -1,6 +1,12 @@
-import * as React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from "react";
+import ReactDOM from "react-dom";
 
-import Options from './Options';
+import { ChakraProvider } from "@chakra-ui/react";
+import Options from "./Options";
 
-ReactDOM.render(<Options />, document.getElementById('options-root'));
+ReactDOM.render(
+  <ChakraProvider>
+    <Options />
+  </ChakraProvider>,
+  document.getElementById("options-root"),
+);
