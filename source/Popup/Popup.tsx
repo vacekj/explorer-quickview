@@ -1,4 +1,6 @@
+import { Box, Button, FormControl, FormHelperText, FormLabel, Select, VStack } from "@chakra-ui/react";
 import * as React from "react";
+import { ReactNode } from "react";
 import { browser, Tabs } from "webextension-polyfill-ts";
 
 function openWebPage(url: string): Promise<Tabs.Tab> {
@@ -7,46 +9,19 @@ function openWebPage(url: string): Promise<Tabs.Tab> {
 
 const Popup: React.FC = () => {
   return (
-    <section id="popup">
-      <h2>WEB-EXTENSION-STARTER</h2>
-      <button
-        id="options__button"
-        type="button"
-        onClick={(): Promise<Tabs.Tab> => {
-          return openWebPage("options.html");
-        }}
-      >
-        Options Page
-      </button>
-      <div className="links__holder">
-        <ul>
-          <li>
-            <button
-              type="button"
-              onClick={(): Promise<Tabs.Tab> => {
-                return openWebPage(
-                  "https://github.com/abhijithvijayan/web-extension-starter",
-                );
-              }}
-            >
-              GitHub
-            </button>
-          </li>
-          <li>
-            <button
-              type="button"
-              onClick={(): Promise<Tabs.Tab> => {
-                return openWebPage(
-                  "https://www.buymeacoffee.com/abhijithvijayan",
-                );
-              }}
-            >
-              Buy Me A Coffee
-            </button>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <VStack m={5} id="popup" minW={16}>
+      <FormControl>
+        <FormLabel>Chain</FormLabel>
+        <Select w={"300px"}>
+          <option value={"ethereum"}>Ethereum Mainnet</option>
+          <option value={"polygon"}>Polygon PoS</option>
+          <option value={"optimism"}>Optimism</option>
+          <option value={"arbitrum"}>Arbitrum</option>
+          <option value={"zksync1"}>ZKSync 1.0</option>
+        </Select>
+        <FormHelperText>Which chain's explorer to open addresses in</FormHelperText>
+      </FormControl>
+    </VStack>
   );
 };
 

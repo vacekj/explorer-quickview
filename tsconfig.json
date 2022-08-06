@@ -12,7 +12,9 @@
     "isolatedModules": true,
     /* Additional Checks */
     "useDefineForClassFields": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
   },
   "include": [
     "source",
