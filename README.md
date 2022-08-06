@@ -42,7 +42,6 @@
 - Browser Tailored Manifest generation
 - Automatic build on code changes
 - Auto packs browser specific build files
-- SASS styling
 - TypeScript by default
 - ES6 modules support
 - React UI Library by default
