@@ -29,7 +29,7 @@ browser.runtime.onMessage.addListener(
 var replaceTextInNode = function(parentNode: Node) {
   for (let i = parentNode.childNodes.length - 1; i >= 0; i--) {
     const node = parentNode.childNodes[i];
-    console.log(explorerUrl());
+
     if (node.nodeType == Node.TEXT_NODE && node.textContent!.match(addressRegex) !== null) {
       let linkified = node.textContent!.replace(addressRegex, (match) => {
         /* Store address and URL in history */

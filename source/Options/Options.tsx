@@ -1,6 +1,7 @@
 import {
   Button,
   Container,
+  Heading,
   HStack,
   Link,
   Table,
@@ -8,6 +9,7 @@ import {
   TableContainer,
   Tbody,
   Td,
+  Text,
   Tfoot,
   Th,
   Thead,
@@ -69,6 +71,9 @@ const Options: React.FC = () => {
 
   return (
     <Container maxW={"full"} p={8}>
+      <Text fontSize={"xl"} mb={3}>
+        History is only stored locally.
+      </Text>
       <HStack justifyContent={"space-between"}>
         <Button
           onClick={() => {
@@ -90,7 +95,7 @@ const Options: React.FC = () => {
       </HStack>
 
       <TableContainer>
-        <Table variant="striped" colorScheme="teal">
+        <Table variant="striped" colorScheme="blackAlpha">
           <Thead>
             <Tr>
               <Th>Date</Th>

@@ -1,4 +1,4 @@
-import { Box, Button, FormControl, FormHelperText, FormLabel, Select, VStack } from "@chakra-ui/react";
+import { Box, Button, FormControl, FormHelperText, FormLabel, Heading, HStack, Select, VStack } from "@chakra-ui/react";
 import * as React from "react";
 import { ReactNode, useState } from "react";
 import browser, { Tabs } from "webextension-polyfill";
@@ -13,14 +13,19 @@ const Popup: React.FC = () => {
 
   return (
     <VStack m={5} id="popup" minW={16}>
-      <Button
-        variant={"link"}
-        onClick={() => {
-          openWebPage("options.html");
-        }}
-      >
-        History
-      </Button>
+      <HStack w={"full"} justifyContent={"space-between"}>
+        <Heading as={"h1"} fontSize={"xl"}>Explorer QuickView</Heading>
+
+        <Button
+          variant={"link"}
+          onClick={() => {
+            openWebPage("options.html");
+          }}
+        >
+          History
+        </Button>
+      </HStack>
+
       <FormControl>
         <FormLabel>Chain</FormLabel>
         <Select
@@ -40,7 +45,7 @@ const Popup: React.FC = () => {
           <option value={"optimism"}>Optimism</option>
           <option value={"arbitrum"}>Arbitrum</option>
         </Select>
-        <FormHelperText>Which chain's explorer to open addresses in</FormHelperText>
+        <FormHelperText>Which chain's explorer to open addresses and txs in</FormHelperText>
       </FormControl>
     </VStack>
   );

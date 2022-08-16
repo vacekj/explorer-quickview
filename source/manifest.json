@@ -1,17 +1,14 @@
 {
   "manifest_version": 2,
-  "name": "Etherscan Quickview",
+  "name": "Explorer Quickview",
   "version": "0.1.0",
 
   "icons": {
-    "16": "assets/icons/favicon-16.png",
-    "32": "assets/icons/favicon-32.png",
-    "48": "assets/icons/favicon-48.png",
-    "128": "assets/icons/favicon-128.png"
+    "128": "assets/icons/favicon.png"
   },
-  "description": "Makes transactions, addresses and contracts",
+  "description": "Makes transactions and addresses clickable, points them to a blockchain explorer",
   "homepage_url": "https://github.com/vacekj/etherscan-quickview",
-  "short_name": "Etherscan Quickview",
+  "short_name": "Explorer Quickview",
 
   "permissions": [
     "activeTab",
@@ -39,10 +36,7 @@
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "assets/icons/favicon-16.png",
-      "32": "assets/icons/favicon-32.png",
-      "48": "assets/icons/favicon-48.png",
-      "128": "assets/icons/favicon-128.png"
+      "128": "assets/icons/favicon.png"
     },
     "default_title": "tiny title",
     "__chrome|opera__chrome_style": false,
